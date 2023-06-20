@@ -42,13 +42,12 @@ features = [[ph, hardness, solids, chloramines, sulfate, conductivity, organic_c
 if st.sidebar.button("Predict"):
     # Predict water potability
     prediction = model.predict(features)
-
-# Display the prediction
-st.subheader("Water Potability Prediction")
-if prediction == 0:
-    st.write("Non-Potable Water")
-else:
-    st.write("Potable Water")
+    # Display the prediction
+    st.subheader("Water Potability Prediction")
+     if prediction == 0:
+        st.write("Non-Potable Water")
+     else:
+        st.write("Potable Water")
 
 # Add disclaimer
 st.sidebar.markdown("---")
