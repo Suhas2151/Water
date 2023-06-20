@@ -48,7 +48,7 @@ if st.sidebar.button("Predict"):
     if prediction == 0:
         st.write("Non-Potable Water")
     else:
-        st.write("Potable Water")
+        st.write("Potable Water,use it wisely")
 
 # Add disclaimer
 st.sidebar.markdown("---")
