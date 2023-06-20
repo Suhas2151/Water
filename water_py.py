@@ -39,11 +39,12 @@ turbidity = st.sidebar.number_input("Turbidity")
 # Create feature vector from user inputs
 features = [[ph, hardness, solids, chloramines, sulfate, conductivity, organic_carbon, trihalomethanes, turbidity]]
 
-# Predict water potability
-prediction = model.predict(features)
+if st.sidebar.button("Predict"):
+    # Predict water potability
+    prediction = model.predict(features)
 
 # Display the prediction
-st.subheader("Prediction")
+st.subheader("Water Potability Prediction")
 if prediction == 0:
     st.write("Non-Potable Water")
 else:
